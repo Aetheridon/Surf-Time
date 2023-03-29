@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Surf Time</title>
+	<style>
+		body {
+			background-image: url("https://i.huffpost.com/gen/1845489/images/o-SURFING-facebook.jpg");
+			background-color: rgba(0,0,0,0.2); /* slightly transparent background */
+			backdrop-filter: blur(5px); /* adds a blur effect to the background image */
+			background-position: center;
+			background-size: cover;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh; /* sets height to 100% of viewport height */
+		}
+
+		h1 {
+			font-size: 5rem;
+			font-weight: bold;
+			text-align: center;
+			margin: 0;
+			color: white; /* sets text color to white */
+			text-shadow: 0px 0px 10px rgba(0,0,0,0.8); /* adds a black outline around the text */
+			position: absolute;
+			top: 25%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1; /* ensures that the text is on top of the background image */
+			padding: 10px; /* adds some padding to the text */
+		}
+		
+		img {
+			width: 100%; /* make image fill container horizontally */
+			height: auto; /* keep aspect ratio of image */
+			position: absolute; /* position behind text */
+			top: 0;
+			left: 0;
+			z-index: -1; /* ensure image is behind the text */
+			filter: blur(5px); /* adds a blur effect to the image */
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 30px;
+			padding: 20px;
+			background-color: #ffffff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+		}
+
+		input[type="location"] {
+			width: 100%;
+			padding: 10px;
+			margin: 10px 0;
+			border-radius: 5px;
+			border: none;
+			font-size: 16px;
+			font-weight: 400;
+			color: #333333;
+			background-color: #f2f2f2;
+		}
+
+		input[type="submit"] {
+			width: 100%;
+			padding: 10px;
+			margin: 10px 0;
+			border-radius: 5px;
+			border: none;
+			font-size: 16px;
+			font-weight: 700;
+			color: #ffffff;
+			background-color: #3c87f0;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #3074e8;
+		}
+	</style>
+</head>
+<body>
+	<h1>Surf Time</h1>
+	<form action="#" method="post">
+		<label for="location">Enter Location to Check Surf Forecast:</label>
+		<input type="location" id="location" name="location" placeholder="E.G: Durban">
+		<input type="submit" value="Check">
+	</form>
+</body
