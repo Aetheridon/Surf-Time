@@ -4,8 +4,6 @@ import urllib.parse
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
-API_KEY = ""
-
 def get_forecast(location):
 
     coords = requests.get(f"https://nominatim.openstreetmap.org/search/{urllib.parse.quote(location)}?format=json").json() # gets lat / long for location... needed for API
